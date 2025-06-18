@@ -12,7 +12,6 @@
 // console.log(null >= 0);
 
 // ===
-
 // console.log("2" === 2); ->check for data type and value both
 // console.log(2 === 2);
 
