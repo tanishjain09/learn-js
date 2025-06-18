@@ -8,11 +8,7 @@ const repoCount = 10
 
 const gameName = new String("Tanish-Seth-iya") //another way to create a 
 
-// console.log(gameName[0]);
-// console.log(gameName.length);
-// console.log(gameName.toUpperCase());
-// console.log(gameName.charAt(2));
-// console.log(gameName.indexOf('a'));
+// console log(gameName.indexOf('a'));
 
 const newString = gameName.substring(0,5)
 // console.log(newString);
@@ -21,8 +17,8 @@ const anotherString = gameName.slice(-5, 4)
 // console.log(anotherString); 
 
 const newStringOne = "   tanish    "
-console.log(newStringOne);
-console.log(newStringOne.trim());
+// console.log(newStringOne);
+// console.log(newStringOne.trim());
 
  
-console.log(gameName.split('-'))  
+console.log(gameName.split('-'))   
