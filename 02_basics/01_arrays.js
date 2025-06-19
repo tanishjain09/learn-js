@@ -1,7 +1,7 @@
 //array 
 
-const myArr = [0, 1, 2, 3, 4, 5]
-const myHeroes = ["shaktiman", "naagraj"]
+const myArr = [0, 1, 2, 3, 4, 5] //js array are resizable
+const myHeroes = ["shaktiman", "naagraj"] 
 
 const myArr2 = new Array(1, 2, 3, 4, 5)
 
@@ -19,7 +19,7 @@ myArr.shift()
 // console.log(myArr.indexOf(3)); 
 // console.log(myArr.includes(9));\
 
-const newArr = myArr.join()
+const newArr = myArr.join() //-> convert array into string type
 
 // console.log(myArr);
 // console.log(newArr);
