@@ -45,11 +45,30 @@ const users = [
     },
 ]
 users[1].email
-console.log(tinderUser);
+// console.log(tinderUser);
 
- console.log(Object.keys(tinderUser));
- console.log(Object.values(tinderUser));
- console.log(Object.entries(tinderUser));
+//  console.log(Object.keys(tinderUser));
+//  console.log(Object.values(tinderUser));
+//  console.log(Object.entries(tinderUser));
 
  
-console.log(tinderUser.hasOwnProperty('isLoggedIn')) //to check if this property present in object or not 
+// console.log(tinderUser.hasOwnProperty('isLoggedIn')) //to check if this property present in object or not
+
+const course = {
+    coursename : "js in hindi",
+    price : "999",
+    courseInstructor : "hitesh"
+}
+
+// course.courseInstructor
+
+//destructuring
+const {courseInstructor : instructor} = course  // allow us to use 'instrucor' only rather than writing the whole line like course.courseInstructor
+console.log(instructor);
+
+// {
+//     "name" : "tanish",
+//     "coursename" : "js in hindi",    ---> this is json format
+//     "price" : "free"  
+// }
+
