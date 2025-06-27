@@ -1,2 +1,2 @@
 
-console.log(marvel_heros[3][1]);
+console.log(JsUser["email"]);
