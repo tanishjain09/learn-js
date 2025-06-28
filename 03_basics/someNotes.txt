@@ -1,0 +1,53 @@
+Javascript Execution context
+
+1.Global Execution context
+2.Function Execution context --->this two is also enough for interview
+3.Eval Execution context
+
+
+{}how js code run   --> Memory Creation Phase
+                    -->Execution Phase
+
+lets take an example:
+let val1 = 10;
+let val2 = 5
+function addNum(num1, num2){
+    let total = num1 + num2
+    return total
+}
+let result1 = addNum(val1, val2)
+let result2 = addNum(10, 2)
+
+now lets see how this code will run steps:
+
+
+1.Global Execution -> this
+2.Memory Phase ->store all variables and value given is undefined as only name is taken now,
+and in function case,function definition is stored,like this:
+
+val1 -> undefined
+val2 -> undefined
+addNum -> definition
+result1 -> undefined
+result2 ->undefined
+
+3.Execution Phase ->
+
+val1 <- 10
+val2 <- 5
+addNum() -> new Execution context-  (got deleted after its work is done)
+         |-----------------------|
+         |       new variable    |
+         |       environment     |
+         |          +            |
+         |       Execution       |
+         |        thread         |
+         |                       |
+         |-----------------------|
+                    | (its also has 2 Phase)    
+      ------------------------------        
+      |                            |
+ Memory Phase                 Execution context    
+ val1 -> undefined              num1 <- 10
+ val2 -> undefined              num2 <- 5       
+ total -> undefined             total <- 15  ->got returned to Global Execution context
