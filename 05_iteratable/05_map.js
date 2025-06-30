@@ -25,7 +25,7 @@ map.set('FR','France')
 // console.log(map);
 
 for (const [key, value] of map) { //[key, value] -> make array destrcuture
-    console.log(key, value);  //for of2
+    console.log(key, value);  //forof 
 }
 
 const myObject ={

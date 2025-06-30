@@ -1,7 +1,7 @@
 // const coding = ["js", "ruby", "java", "cpp"]
 
-// const values = coding.forEach( (item) => {
-//     // console.log(item);
+// const values = coding.forEach( (item) => {  //-> we give callback function
+//      // console.log(item);
 //     return item
 // })
 
