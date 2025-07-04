@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #414141; color:aliceblue">
+    <h1>Just a list</h1>
+    <div>
+        <ul id="images">
+    <li><img width="200px" id="sukhoi" src="images\su57_photo.jpg" alt="SU-57 Fighter Jet" "></li>
+    <li><img  width="200px" id="flexmodel" src="images\flex_model.png" alt="flexmodel"></li>
+    <li> <a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    //document.getElementById('sukhoi').onclick = function(){  -> will not juse this approach
+    //    alert('sukhoi coming')
+    //}
+    
+    // attachEvent()
+    // jQuery -> on
+
+    //in eventListener oject e
+    //type, timestamp, defaultPrevented
+    //target, toElement, srcElement, currentTarget
+    //clientX, clientY, screenX, screenY
+    //altkey, ctrlkey, shiftkey, keyCode
+
+    
+
+    //document.getElementById('images').addEventListener('click', function(e) {  // e is event object
+    //    console.log("click inside the ul")
+    //},false)
+
+    //event propogations is false downside
+
+    //document.getElementById('sukhoi').addEventListener('click', function(e) {  // e is event object
+    //    console.log("sukhoi clicked")
+    //    e.stopPropagation()
+    //},false)
+
+    //here capturing and bubbling event is important
+    
+
+    //document.getElementById('google').addEventListener
+    //('click',function(e){
+    //    e.preventDefault()  
+    //    e.stopPropagation()
+    //    console.log("Google clicked")
+    //},false)
+
+    document.querySelector('#images').addEventListener
+    ('click', function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove() //if we click on list bullet than whole parent .i.e ul will be remove,thats why using if to check
+
+        //removeIt.parentNode.removeChild(removeIt)
+        }
+         
+
+    },false)
+
+
+
+
+
+
+</script>
+</html>
