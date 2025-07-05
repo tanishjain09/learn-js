@@ -1,0 +1,13 @@
+javascript -> synchronous and single threaded language
+(default js)
+
+
+execution context -> execute one of code at a time
+each operation waits for the last one to complete before executing
+
+
+Blocking code vs Non Blocking code
+Blocking code -> block the flow of program -> read the file sync
+
+Non Blocking code -> doest not block execution -> read file async
+
