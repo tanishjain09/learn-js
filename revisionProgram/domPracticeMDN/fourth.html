@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading and modifying the three</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <input type="button" value="Change this document." />
+    <h2>Header</h2>
+    <p>Paragraph</p>
+</body>
+<script>
+    document.querySelector("input").addEventListener("click", () =>{
+        //document.getElementsByTagName("h2") return a NodeList of the <h2>
+        const header = document.getElementsByTagName("h2").item(0);
+        
+        //firstChild of the header is a Text node;
+        header.firstChild.data = "A dynamic document";
+
+        //now header is a "A dynamic document"
+
+        //Access the first paragraph
+        const para = document.getElementsByTagName("p").item(0);
+        para.firstChild.data = "This is the first paragrapgh";
+
+        //create a new text node for the second paragraph
+        const newText = document.createTextNode("This is the second paragraph");
+
+        //create a new element to be the second paragraph
+        const newElement = document.createElement("p");
+
+        //Put the text in the paragraph
+        newElement.appendChild(newText);
+
+        //put the paragraph on the end of the document by appending it to
+        // the body (which is the parent of para)
+        para.parentElement.appendChild(newElement)
+    });
+</script>
+</html>
