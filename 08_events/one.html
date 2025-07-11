@@ -17,11 +17,11 @@
 </body>
 
 <script>
-    //document.getElementById('sukhoi').onclick = function(){  -> will not juse this approach
-    //    alert('sukhoi coming')
+    //document.getElementById('sukhoi').onclick = function(){  //-> will not juse this approach
+    //  alert('sukhoi coming')
     //}
     
-    // attachEvent()
+    //attachEvent()
     // jQuery -> on
 
     //in eventListener oject e
@@ -32,16 +32,16 @@
 
     
 
-    //document.getElementById('images').addEventListener('click', function(e) {  // e is event object
-    //    console.log("click inside the ul")
-    //},false)
+    document.getElementById('images').addEventListener('click', function(e) {  // e is event object
+       console.log("click inside the ul")
+    },true)
 
     //event propogations is false downside
 
-    //document.getElementById('sukhoi').addEventListener('click', function(e) {  // e is event object
-    //    console.log("sukhoi clicked")
-    //    e.stopPropagation()
-    //},false)
+    document.getElementById('sukhoi').addEventListener('click', function(e) {  // e is event object
+        console.log("sukhoi clicked")
+        e.stopPropagation()
+    },true)
 
     //here capturing and bubbling event is important
     
@@ -53,19 +53,19 @@
     //    console.log("Google clicked")
     //},false)
 
-    document.querySelector('#images').addEventListener
-    ('click', function(e){
-        console.log(e.target.tagName);
-        if(e.target.tagName === 'IMG'){
-            console.log(e.target.id);
-            let removeIt = e.target.parentNode
-            removeIt.remove() //if we click on list bullet than whole parent .i.e ul will be remove,thats why using if to check
+    //document.querySelector('#images').addEventListener
+    //('click', function(e){
+    //    console.log(e.target.tagName);
+    //    if(e.target.tagName === 'IMG'){
+     //       console.log(e.target.id);
+       //     let removeIt = e.target.parentNode
+       //     removeIt.remove() //if we click on list bullet than whole parent .i.e ul will be remove,thats why using if to check
 
         //removeIt.parentNode.removeChild(removeIt)
-        }
+        //}
          
 
-    },false)
+    //},false)
 
 
 
